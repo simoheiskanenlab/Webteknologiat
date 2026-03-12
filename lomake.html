@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Palautelomake</title>
+</head>
+<body>
+
+  <table><tr><td>
+  <fieldset>
+    <legend>Contact information:</legend>
+    <table>
+      <tr>
+        <td>First name:</td>
+        <td><input type="text" name="firstname" size="20"></td>
+        <td rowspan="4">
+          Preferred contact method:<br><br>
+          <input type="checkbox" id="pref_email" name="contact_method" value="email">
+          <label for="pref_email">Email</label><br>
+          <input type="checkbox" id="pref_tel" name="contact_method" value="telephone">
+          <label for="pref_tel">Telephone</label>
+        </td>
+      </tr>
+      <tr>
+        <td>Last name:</td>
+        <td><input type="text" name="lastname" size="20"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td><input type="email" name="email" size="20"></td>
+      </tr>
+      <tr>
+        <td>Telephone:</td>
+        <td><input type="tel" name="telephone" size="20"></td>
+      </tr>
+    </table>
+  </fieldset>
+  </td></tr><tr><td>
+  <fieldset>
+    <legend>Feedback:</legend>
+    <table>
+      <tr>
+        <td>Message subject:</td>
+        <td><input type="text" name="subject" size="20"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><textarea name="message" rows="8" cols="50"></textarea></td>
+      </tr>
+      <tr>
+        <td>Attach a file:</td>
+        <td><input type="file" name="attachment"></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" value="Send"></td>
+      </tr>
+    </table>
+  </fieldset>
+  </td></tr></table>
+</html>
