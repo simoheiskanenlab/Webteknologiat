@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palautelomake</title>
+  <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+
+  <div class="sisalto">
+
+    <fieldset>
+      <legend>Contact information:</legend>
+
+      <div class="kentta">
+        <label for="firstname">First name:</label>
+        <input type="text" id="firstname" name="firstname">
+      </div>
+
+      <div class="kentta">
+        <label for="lastname">Last name:</label>
+        <input type="text" id="lastname" name="lastname">
+      </div>
+
+      <div class="kentta">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <div class="kentta">
+        <label for="telephone">Telephone:</label>
+        <input type="tel" id="telephone" name="telephone">
+      </div>
+
+      <div class="yhteystapa">
+        <p>Preferred contact method:</p>
+        <label>
+          <input type="checkbox" id="pref_email" name="contact_method" value="email">
+          Email
+        </label>
+        <label>
+          <input type="checkbox" id="pref_tel" name="contact_method" value="telephone">
+          Telephone
+        </label>
+      </div>
+
+    </fieldset>
+
+    <fieldset>
+      <legend>Feedback:</legend>
+
+      <div class="kentta">
+        <label for="subject">Message subject:</label>
+        <input type="text" id="subject" name="subject">
+      </div>
+
+      <div class="viesti">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="8"></textarea>
+      </div>
+
+      <div class="liite">
+        <label for="attachment">Attach a file:</label>
+        <input type="file" id="attachment" name="attachment">
+      </div>
+
+      <div class="nappi">
+        <input type="submit" value="Send">
+      </div>
+
+    </fieldset>
+
+  </div>
+
+</body>
+</html>
