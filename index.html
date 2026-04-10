@@ -1,93 +1,183 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Opintoni</title>
-  <link rel="stylesheet" href="tyyli.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Opetussivu</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Oma CSS -->
+    <style>
+        body {
+            padding-top: 70px;
+        }
+        .example-box {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="sisalto">
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">HTML Kurssi</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <h1>Opintoni</h1>
-    <p>Tällä sivulla käydään läpi suorittamiani kursseja, niiden sisältöjä ja opintopisteitä.</p>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="https://github.com/simoheiskanenlab/Webteknologiat/blob/main/HTML-sivu.html">Tehtävä 1</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/simoheiskanenlab/Webteknologiat/blob/main/lomake.html">Tehtävä 2</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.w3schools.com">Lisämateriaali</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-    <h2>Kurssit ja opintopisteet</h2>
-    <table>
-      <tr>
-        <th>Kurssin nimi</th>
-        <th>Opintopisteet</th>
-        <th>Aihe</th>
-      </tr>
-      <tr>
-        <td>Orientation to Sustainability Thinking</td>
-        <td>2 osp</td>
-        <td>Kestävä kehitys</td>
-      </tr>
-      <tr>
-        <td>English for Work</td>
-        <td>4 osp</td>
-        <td>Kieli</td>
-      </tr>
-      <tr>
-        <td>Ohjelmoinnin perusteet</td>
-        <td>5 osp</td>
-        <td>Ohjelmointi</td>
-      </tr>
-      <tr>
-        <td>Olio-ohjelmoinnin perusteet</td>
-        <td>5 osp</td>
-        <td>Ohjelmointi</td>
-      </tr>
-      <tr>
-        <td>Tietokannat</td>
-        <td>5 osp</td>
-        <td>Tietotekniikka</td>
-      </tr>
-      <tr>
-        <td>Asiakkuudet ja Markkinointi</td>
-        <td>5 osp</td>
-        <td>Liiketalous</td>
-      </tr>
-      <tr>
-        <td>Taloushallinto</td>
-        <td>5 osp</td>
-        <td>Liiketalous</td>
-      </tr>
-      <tr>
-        <td>Työvälineosaaminen</td>
-        <td>5 osp</td>
-        <td>Tietotekniikka</td>
-      </tr>
-      <tr>
-        <td>English Prep Course</td>
-        <td>3 osp</td>
-        <td>Kieli</td>
-      </tr>
-    </table>
-    <p>Yhteensä: <strong>39 opintopistettä</strong></p>
+<div class="container">
 
-    <h2>Mitä olen oppinut</h2>
-    <p>Opinnoissa olen kehittänyt taitoja monelta eri alalta:</p>
-    <ul>
-      <li>C#-ohjelmointi ja olio-ohjelmointi</li>
-      <li>SQL-tietokannat</li>
-      <li>Excel ja Office-ohjelmat</li>
-      <li>Kirjanpito ja budjetointi</li>
-      <li>Markkinointi ja asiakaspalvelu</li>
-      <li>Englannin kielen työelämätaidot</li>
-      <li>Kestävä kehitys ja vastuullisuus</li>
-    </ul>
+    <h1 class="mb-4">HTML-sivun rakenne</h1>
 
-    <h2>Hyödyllisiä linkkejä</h2>
-    <ul>
-      <li><a href="https://www.python.org" target="_blank">Python-ohjelmointikieli</a></li>
-      <li><a href="https://www.w3schools.com/sql/" target="_blank">SQL-opas W3Schools</a></li>
-      <li><a href="https://sdgs.un.org/goals" target="_blank">YK:n kestävän kehityksen tavoitteet</a></li>
-    </ul>
+    <div class="card mb-4">
+        <div class="card-body">
+            <p>
+                Perus HTML-sivu koostuu seuraavista osista:
+            </p>
+            <div class="example-box">
+                &lt;html&gt; - koko sivu<br>
+                &lt;head&gt; - metatiedot<br>
+                &lt;body&gt; - näkyvä sisältö
+            </div>
+        </div>
+    </div>
 
-  </div>
+    <!-- TAGIT -->
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;HTML&gt;</h3>
+                    <p>Määrittelee HTML-dokumentin alun ja lopun.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;HEAD&gt;</h3>
+                    <p>Sisältää metatiedot, kuten sivun otsikon ja linkit tyyleihin.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;BODY&gt;</h3>
+                    <p>Sisältää kaiken sivulla näkyvän sisällön.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;P&gt;</h3>
+                    <p>Kappaletekstiä varten.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;IMG&gt;</h3>
+                    <p>Kuvan lisääminen sivulle.</p>
+                    <div class="example-box">
+                        &lt;img src="kuva.jpg" alt="kuva"&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;A&gt;</h3>
+                    <p>Linkkien luominen.</p>
+                    <div class="example-box">
+                        &lt;a href="https://example.com"&gt;Linkki&lt;/a&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;BR&gt;</h3>
+                    <p>Rivinvaihto.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3>&lt;H1&gt;</h3>
+                    <p>Pääotsikko.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- CSS OSIO -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2>CSS-muotoilu</h2>
+            <p>
+                CSS:llä määritellään sivun ulkoasu. Tyylejä voidaan lisätä:
+            </p>
+            <ul>
+                <li>Inline-tyylinä (style="...")</li>
+                <li>Head-osassa &lt;style&gt;-tagissa</li>
+                <li>Erillisessä .css-tiedostossa</li>
+            </ul>
+            <div class="example-box">
+                body { background-color: lightgray; }
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP OSIO -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2>Bootstrap</h2>
+            <p>
+                Bootstrap on valmis CSS-kirjasto, joka helpottaa sivujen rakentamista.
+            </p>
+            <ul>
+                <li>Valmiit komponentit (navbar, card, button)</li>
+                <li>Responsiivinen rakenne</li>
+                <li>Nopea kehitys</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
