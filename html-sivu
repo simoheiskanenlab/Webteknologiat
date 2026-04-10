@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Opintoni</title>
+</head>
+<body>
+
+
+  <h1>Opintoni</h1>
+
+  <p>Tällä sivulla käydään läpi suorittamiani kursseja, niiden sisältöjä ja opintopisteitä.</p>
+
+  <h2>Kurssit ja opintopisteet</h2>
+
+  <table>
+    <tr>
+      <th>Kurssin nimi</th>
+      <th>Opintopisteet</th>
+      <th>Aihe</th>
+    </tr>
+    <tr>
+      <td>Orientation to Sustainability Thinking</td>
+      <td>2 osp</td>
+      <td>Kestävä kehitys</td>
+    </tr>
+    <tr>
+      <td>English for Work</td>
+      <td>4 osp</td>
+      <td>Kieli</td>
+    </tr>
+    <tr>
+      <td>Ohjelmoinnin perusteet</td>
+      <td>5 osp</td>
+      <td>Ohjelmointi</td>
+    </tr>
+    <tr>
+      <td>Olio-ohjelmoinnin perusteet</td>
+      <td>5 osp</td>
+      <td>Ohjelmointi</td>
+    </tr>
+    <tr>
+      <td>Tietokannat</td>
+      <td>5 osp</td>
+      <td>Tietotekniikka</td>
+    </tr>
+    <tr>
+      <td>Asiakkuudet ja Markkinointi</td>
+      <td>5 osp</td>
+      <td>Liiketalous</td>
+    </tr>
+    <tr>
+      <td>Taloushallinto</td>
+      <td>5 osp</td>
+      <td>Liiketalous</td>
+    </tr>
+    <tr>
+      <td>Työvälineosaaminen</td>
+      <td>5 osp</td>
+      <td>Tietotekniikka</td>
+    </tr>
+    <tr>
+      <td>English Prep Course</td>
+      <td>3 osp</td>
+      <td>Kieli</td>
+    </tr>
+  </table>
+
+  <p>Yhteensä: <strong>39 opintopistettä</strong></p>
+
+  <h2>Mitä olen oppinut</h2>
+
+  <p>Opinnoissa olen kehittänyt taitoja monelta eri alalta:</p>
+
+  <ul>
+    <li>C#-ohjelmointi ja olio-ohjelmointi</li>
+    <li>SQL-tietokannat</li>
+    <li>Excel ja Office-ohjelmat</li>
+    <li>Kirjanpito ja budjetointi</li>
+    <li>Markkinointi ja asiakaspalvelu</li>
+    <li>Englannin kielen työelämätaidot</li>
+    <li>Kestävä kehitys ja vastuullisuus</li>
+  </ul>
+
+  <h2>Hyödyllisiä linkkejä</h2>
+
+  <ul>
+    <li><a href="https://www.python.org" target="_blank">Python-ohjelmointikieli</a></li>
+    <li><a href="https://www.w3schools.com/sql/" target="_blank">SQL-opas W3Schools</a></li>
+    <li><a href="https://sdgs.un.org/goals" target="_blank">YK:n kestävän kehityksen tavoitteet</a></li>
+  </ul>
+
+</body>
+</html>
