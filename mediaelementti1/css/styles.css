@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  margin: 0;
+}
+
+/* Kuvakarusellin container */
+#karuselli {
+  margin: 2%;          /* suhteellinen marginaali */
+  padding: 1%;         /* täyte */
+  width: 50%;          /* leveys */
+  margin-left: auto;   /* keskitys vaakasuunnassa */
+  margin-right: auto;
+  overflow: hidden;    /* ylivuoto: piilota ylimenevä sisältö */
+  text-align: center;  /* sisällön keskitys */
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+
+#karuselli h2 {
+  margin-bottom: 1rem;
+  color: #2d4a2a;
+  font-size: 1.4rem;
+}
+
+#karuselli img {
+  width: 100%;
+  height: auto;        /* korkeus skaalautuu kuvan mukaan */
+  max-height: 400px;   /* ettei kuva veny liian isoksi */
+  object-fit: contain; /* koko kuva näkyy, ei rajata */
+  display: block;
+}
+
+#slide-caption {
+  background: #a8c9a0;
+  border-radius: 6px;
+  padding: 0.6rem 1rem;
+  margin-top: 8px;
+  font-size: 1.1rem;
+  color: #2d4a2a;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+}
+
+.controls button {
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  border: none;
+  background: #7a7a7a;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.controls button:hover {
+  background: #555;
+}
