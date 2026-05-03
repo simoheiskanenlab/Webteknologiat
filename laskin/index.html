@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laskin</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="kortti">
+
+  <h1>🧮 Laskin</h1>
+
+  <div class="rivi">
+    <button class="askel" id="decA">−</button>
+    <input type="number" id="numA" />
+    <button class="askel" id="incA">+</button>
+
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">−</option>
+      <option value="*">×</option>
+      <option value="/">÷</option>
+    </select>
+
+    <button class="askel" id="decB">−</button>
+    <input type="number" id="numB" />
+    <button class="askel" id="incB">+</button>
+  </div>
+
+  <button id="btnLaske">Laske</button>
+
+  <div id="tulos"></div>
+
+  <div id="historia"></div>
+
+</div>
+
+<div id="errorDialog" title="Virhe" style="display:none;">
+  <p id="errorMsg"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
