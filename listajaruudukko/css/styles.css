@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg: #f5f0e8;
+  --surface: #faf8f3;
+  --surface2: #ede9de;
+  --text: #1a1714;
+  --text-muted: #6b6560;
+  --accent: #c0392b;
+  --accent-light: #f9e8e7;
+  --border: #d4cfc4;
+  --card-bg: #ffffff;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 2rem 0 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.site-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  padding: 0.75rem 0;
+}
+
+.item-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.view-toggles {
+  display: flex;
+  gap: 4px;
+  background: var(--surface2);
+  padding: 3px;
+  border-radius: 8px;
+}
+
+.btn-view {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-muted);
+  transition: all 0.18s ease;
+}
+
+.btn-view svg { width: 15px; height: 15px; }
+
+.btn-view.active {
+  background: var(--card-bg);
+  color: var(--accent);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.btn-view:not(.active):hover {
+  color: var(--text);
+  background: rgba(255,255,255,0.5);
+}
+
+/* --- Main --- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem;
+}
+
+/* --- GRID-NÄKYMÄ --- */
+#media-container.grid-view {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+#media-container.grid-view .media-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#media-container.grid-view .media-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+#media-container.grid-view .card-image {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  display: block;
+}
+
+#media-container.grid-view .card-body {
+  padding: 0.9rem 1.1rem;
+}
+
+#media-container.grid-view .card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* --- LISTA-NÄKYMÄ --- */
+#media-container.list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#media-container.list-view .media-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: background 0.15s ease;
+}
+
+#media-container.list-view .media-card:hover {
+  background: var(--surface);
+}
+
+#media-container.list-view .card-image {
+  width: 180px;
+  min-width: 180px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+
+#media-container.list-view .card-body {
+  padding: 1rem 1.4rem;
+}
+
+#media-container.list-view .card-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* --- Animaatio --- */
+#media-container .media-card {
+  animation: fadeIn 0.3s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Responsiivisuus --- */
+@media (max-width: 768px) {
+  header h1 { font-size: 2rem; }
+  #media-container.grid-view { grid-template-columns: repeat(2, 1fr); }
+  #media-container.list-view .card-image { width: 130px; min-width: 130px; height: 90px; }
+}
+
+@media (max-width: 520px) {
+  #media-container.grid-view { grid-template-columns: 1fr; }
+  #media-container.list-view .card-image { display: none; }
+}
